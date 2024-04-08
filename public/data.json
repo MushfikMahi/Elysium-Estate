@@ -1,6 +1,6 @@
 [
   {
-    "image_url": "https://example.com/penthouse_image.jpg",
+    "image_url": "https://img.freepik.com/free-photo/view-from-balcony-apartment_188544-12685.jpg?w=996",
     "estate_title": "Luxury Penthouse with Panoramic Views",
     "id": "001",
     "segment_name": "Penthouse",
@@ -17,7 +17,7 @@
     ]
   },
   {
-    "image_url": "https://example.com/beachfront_property.jpg",
+    "image_url": "https://img.freepik.com/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302626.jpg?w=996",
     "estate_title": "Exquisite Beachfront Property",
     "id": "002",
     "segment_name": "Beachfront Property",
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "image_url": "https://example.com/private_island.jpg",
+    "image_url": "https://img.freepik.com/premium-photo/private-island-landscaping-paradise-designed-nature-perfected_1003615-9767.jpg?w=996",
     "estate_title": "Private Island Retreat",
     "id": "003",
     "segment_name": "Private Island",
@@ -46,7 +46,7 @@
     "facilities": ["Luxury Villa", "Helipad", "Yacht Dock", "Infinity Pool"]
   },
   {
-    "image_url": "https://example.com/luxury_villa.jpg",
+    "image_url": "https://img.freepik.com/free-psd/sea-viewluxury-modern-beach-house-generative-ai_587448-1839.jpg?w=996",
     "estate_title": "Majestic Waterfront Villa",
     "id": "004",
     "segment_name": "Villa",
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "image_url": "https://example.com/luxury_resort.jpg",
+    "image_url": "https://img.freepik.com/free-photo/beautiful-luxury-outdoor-swimming-pool-hotel-resort_74190-7433.jpg?w=996",
     "estate_title": "Luxury Resort & Spa",
     "id": "005",
     "segment_name": "Resort",
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "image_url": "https://example.com/luxury_mansion.jpg",
+    "image_url": "https://img.freepik.com/free-photo/outdoor-patio_1203-3548.jpg?w=996",
     "estate_title": "Magnificent Oceanfront Mansion",
     "id": "006",
     "segment_name": "Mansion",
