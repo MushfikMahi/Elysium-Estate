@@ -1,15 +1,25 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
+  const { emailPassLogIn } = useContext(AuthContext);
   const hadleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+    emailPassLogIn(email, password)
+      .then()
+      .catch((error) => console.log(error));
   };
 
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>Elysium - Login</title>
+      </Helmet>
       <div className="hero-content flex-col">
         <div className="text-center">
           <h1 className="text-5xl font-bold">Login now!</h1>
