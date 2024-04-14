@@ -3,8 +3,9 @@ import NavBar from "./Shered/NavBar/Navbar";
 import Footer from "./Shered/Footer/Footer";
 const Root = () => {
   return (
-    <div className="max-w-6xl mx-auto font-poppins">
+    <div className="font-poppins">
       <NavBar> </NavBar>
+
       <Outlet></Outlet>
       <Footer></Footer>
     </div>

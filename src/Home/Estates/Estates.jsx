@@ -15,7 +15,7 @@ const Estates = ({ data }) => {
   } = data;
   return (
     <div>
-      <div className="card glass text-white">
+      <div className="card glass">
         <figure>
           <img src={image_url} className="w-full h-[200px]" alt="car!" />
         </figure>

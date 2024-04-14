@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,7 +11,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 export default function Banner() {
   return (
-    <>
+    <div className="">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -91,6 +90,6 @@ export default function Banner() {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }

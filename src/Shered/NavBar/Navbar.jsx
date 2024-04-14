@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { emailPassUser, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
       .then((res) => console.log(res, "log outted"))
@@ -24,11 +24,16 @@ const Navbar = () => {
       <li>
         <NavLink to={"/register"}>Register</NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink to={"/profile"}>Profile</NavLink>
+        </li>
+      )}
     </>
   );
 
   return (
-    <div className="navbar fixed z-10 bg-gray-900 bg-opacity-40 text-white">
+    <div className="navbar fixed z-10 bg-green-200 text-white bg-opacity-20 bg-transparent">
       <Helmet>
         <title>Elysium - Home</title>
       </Helmet>
@@ -57,26 +62,28 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Elysium Estates</a>
+        <a className="btn btn-ghost text-xl">Elysium Estate</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      {emailPassUser ? (
-        <div>
-          {" "}
-          <button onClick={handleLogOut} className="btn">
-            Log Out
-          </button>{" "}
-          <div className="w-10 rounded-full">
-            <img alt="user" src={emailPassUser.photoURL} />
+      <div className="navbar-end">
+        {user ? (
+          <div className="flex items-center gap-5">
+            {" "}
+            <button onClick={handleLogOut} className="btn">
+              Log Out
+            </button>{" "}
+            <div className="w-10 rounded-full">
+              <img alt="user" src={user.photoURL} />
+            </div>
           </div>
-        </div>
-      ) : (
-        <Link to={"/login"} className="btn">
-          Log In
-        </Link>
-      )}
+        ) : (
+          <Link to={"/login"} className="btn">
+            Log In
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
