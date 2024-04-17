@@ -23,7 +23,7 @@ const Estates = ({ data }) => {
           <h2 className="card-title">{estate_title}</h2>
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <Link to={`/estate/${id}`} className="btn btn-primary">
+            <Link to={`/estate/${id}`} className="btn bg-green-500 text-white">
               Property Detail
             </Link>
           </div>

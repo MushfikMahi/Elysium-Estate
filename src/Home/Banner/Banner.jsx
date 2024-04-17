@@ -33,14 +33,18 @@ export default function Banner() {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md text-white">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <div className="px-20 text-white">
+                <h1 className="mb-5 text-5xl font-bold">
+                  Exclusive Properties for Discerning Clients
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Indulge in opulence with our collection of meticulously
+                  designed residences that redefine the meaning of luxury. With
+                  unparalleled attention to detail and world-class amenities,
+                  these estates offer a lifestyle of sophistication and
+                  refinement.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                {/* <button className="btn btn-primary">Get Started</button> */}
               </div>
             </div>
           </div>
@@ -55,14 +59,18 @@ export default function Banner() {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md text-white">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <div className="px-20 text-white">
+                <h1 className="mb-5 text-5xl font-bold">
+                  Experience Extraordinary Living Spaces
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Immerse yourself in the epitome of luxury with our portfolio
+                  of extraordinary living spaces. From sprawling mansions
+                  nestled in picturesque landscapes to secluded private islands,
+                  each property offers a unique opportunity to experience the
+                  pinnacle of luxury living.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                {/* <button className="btn btn-primary">Get Started</button> */}
               </div>
             </div>
           </div>
@@ -77,14 +85,18 @@ export default function Banner() {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md text-white">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <div className="px-20 text-white">
+                <h1 className="mb-5 text-5xl font-bold">
+                  Unparalleled Luxury and Sophistication
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Indulge in opulence with our collection of meticulously
+                  designed residences that redefine the meaning of luxury. With
+                  unparalleled attention to detail and world-class amenities,
+                  these estates offer a lifestyle of sophistication and
+                  refinement.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                {/* <button className="btn btn-primary">Get Started</button> */}
               </div>
             </div>
           </div>

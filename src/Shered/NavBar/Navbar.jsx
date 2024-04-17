@@ -7,7 +7,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-      .then((res) => console.log(res, "log outted"))
+      .then(() => console.log("log outted"))
       .catch((error) => console.log(error));
   };
   const links = (
@@ -33,7 +33,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar fixed z-10 bg-green-200 text-white bg-opacity-20 bg-transparent">
+    <div className="navbar fixed z-10 bg-white bg-opacity-60 text-black">
       <Helmet>
         <title>Elysium - Home</title>
       </Helmet>
@@ -71,7 +71,10 @@ const Navbar = () => {
         {user ? (
           <div className="flex items-center gap-5">
             {" "}
-            <button onClick={handleLogOut} className="btn">
+            <button
+              onClick={handleLogOut}
+              className="btn bg-green-500 text-white border-none"
+            >
               Log Out
             </button>{" "}
             <div className="w-10 rounded-full">

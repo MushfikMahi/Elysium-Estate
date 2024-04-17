@@ -4,9 +4,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
-import { FaGoogle } from "react-icons/fa6";
+import { FaGithub, FaGoogle } from "react-icons/fa6";
 const Register = () => {
-  const { emailPassCreateUser, googleCreateUser } = useContext(AuthContext);
+  const {
+    emailPassCreateUser,
+    googleCreateUser,
+    gitHubCreateUser,
+    updateUser,
+  } = useContext(AuthContext);
   const hadleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -18,7 +23,10 @@ const Register = () => {
       if (/.*[A-Z].*/.test(password)) {
         if (/.*[a-z].*/.test(password)) {
           emailPassCreateUser(email, password)
-            .then((res) => console.log(res.user))
+            .then(() => {
+              updateUser("name", "https://ibb.co/S6MHWFc");
+              console.log(name, photo);
+            })
             .catch((error) => toast.error(error.message));
         } else {
           toast("your password must have to contain 1 lowercase");
@@ -35,6 +43,11 @@ const Register = () => {
   };
   const handelGoogleSignIn = () => {
     googleCreateUser()
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
+  };
+  const handelGitHubSignIn = () => {
+    gitHubCreateUser()
       .then((res) => console.log(res))
       .catch((error) => console.log(error));
   };
@@ -125,6 +138,15 @@ const Register = () => {
                 >
                   <FaGoogle />
                   Sign in with Google
+                </button>
+              </div>
+              <div className="mt-5">
+                <button
+                  className="btn bg-transparent w-full border-green-500 hover:border-transparent text-white hover:bg-green-400"
+                  onClick={handelGitHubSignIn}
+                >
+                  <FaGithub />
+                  Sign in with GitHUb
                 </button>
               </div>
             </div>

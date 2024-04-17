@@ -1,4 +1,5 @@
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -21,6 +22,12 @@ const AuthProvider = ({ children }) => {
   const emailPassCreateUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+  // create user using GitHub
+  const gitHubProvider = new GithubAuthProvider();
+  const gitHubCreateUser = () => {
+    setLoading(true);
+    return signInWithPopup(auth, gitHubProvider);
   };
   // create user using google
   const googleProvider = new GoogleAuthProvider();
@@ -59,6 +66,7 @@ const AuthProvider = ({ children }) => {
     user,
     emailPassLogIn,
     googleCreateUser,
+    gitHubCreateUser,
     loading,
     updateUser,
   };

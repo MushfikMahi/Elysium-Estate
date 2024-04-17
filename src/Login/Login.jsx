@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { FaGoogle } from "react-icons/fa6";
+import { FaGithub, FaGoogle } from "react-icons/fa6";
 const Login = () => {
-  const { emailPassLogIn, googleCreateUser } = useContext(AuthContext);
+  const { emailPassLogIn, googleCreateUser, gitHubCreateUser } =
+    useContext(AuthContext);
   const hadleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -16,6 +17,11 @@ const Login = () => {
   };
   const handelGoogleSignIn = () => {
     googleCreateUser()
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
+  };
+  const handleGitHubSignIn = () => {
+    gitHubCreateUser()
       .then((res) => console.log(res))
       .catch((error) => console.log(error));
   };
@@ -90,6 +96,15 @@ const Login = () => {
                 >
                   <FaGoogle />
                   Log in with Google
+                </button>
+              </div>
+              <div className="mt-5">
+                <button
+                  className="btn bg-transparent w-full border-green-500 hover:border-transparent text-white hover:bg-green-400"
+                  onClick={handleGitHubSignIn}
+                >
+                  <FaGithub />
+                  Log in with GitHub
                 </button>
               </div>
             </div>
