@@ -25,7 +25,7 @@ export default function Banner() {
       >
         <SwiperSlide>
           <div
-            className="hero h-[600px]"
+            className="hero md:h-[600px] h-[400px]"
             style={{
               backgroundImage:
                 "url(https://img.freepik.com/free-photo/light-garden-luxury-pool-nature_1203-4908.jpg?w=996)",
@@ -33,11 +33,11 @@ export default function Banner() {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="px-20 text-white">
-                <h1 className="mb-5 text-5xl font-bold">
+              <div className="md:px-20 px-10 text-white">
+                <h1 className="mb-5 lg:text-5xl md:text-3xl text-2xl font-bold">
                   Exclusive Properties for Discerning Clients
                 </h1>
-                <p className="mb-5">
+                <p className="mb-5 text-sm md:text-base">
                   Indulge in opulence with our collection of meticulously
                   designed residences that redefine the meaning of luxury. With
                   unparalleled attention to detail and world-class amenities,
@@ -51,7 +51,7 @@ export default function Banner() {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="hero h-[600px]"
+            className="hero md:h-[600px] h-[400px]"
             style={{
               backgroundImage:
                 "url(https://img.freepik.com/free-photo/modern-luxury-domestic-room-comfortable-relaxation-generative-ai_188544-12679.jpg?w=996)",
@@ -59,11 +59,11 @@ export default function Banner() {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="px-20 text-white">
-                <h1 className="mb-5 text-5xl font-bold">
+              <div className="md:px-20 px-10 text-white">
+                <h1 className="mb-5 lg:text-5xl md:text-3xl text-2xl font-bold">
                   Experience Extraordinary Living Spaces
                 </h1>
-                <p className="mb-5">
+                <p className="mb-5 text-sm md:text-base">
                   Immerse yourself in the epitome of luxury with our portfolio
                   of extraordinary living spaces. From sprawling mansions
                   nestled in picturesque landscapes to secluded private islands,
@@ -77,7 +77,7 @@ export default function Banner() {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="hero h-[600px]"
+            className="hero md:h-[600px] h-[400px]"
             style={{
               backgroundImage:
                 "url(https://img.freepik.com/free-photo/futuristic-representation-water-home-architecture_23-2151048182.jpg?w=996)",
@@ -85,11 +85,11 @@ export default function Banner() {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="px-20 text-white">
-                <h1 className="mb-5 text-5xl font-bold">
+              <div className="md:px-20 px-10 text-white">
+                <h1 className="mb-5 lg:text-5xl md:text-3xl text-2xl font-bold">
                   Unparalleled Luxury and Sophistication
                 </h1>
-                <p className="mb-5">
+                <p className="mb-5 text-sm md:text-base">
                   Indulge in opulence with our collection of meticulously
                   designed residences that redefine the meaning of luxury. With
                   unparalleled attention to detail and world-class amenities,

@@ -24,7 +24,7 @@ const EstateDetails = () => {
   const position = [51.505, 10.09];
   return (
     <div>
-      <div className="container mx-auto flex pt-16 gap-5 min-h-screen items-center">
+      <div className="container mx-auto mb-20 flex flex-col md:flex-row pt-16 gap-5 min-h-screen items-center">
         <div className="flex-1">
           <img src={image_url} className="w-full rounded-2xl" alt="" />
         </div>

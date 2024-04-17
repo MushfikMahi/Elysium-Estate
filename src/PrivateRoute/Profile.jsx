@@ -18,9 +18,9 @@ const Profile = () => {
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-center text-neutral-content">
+      <div className="hero-content text-center text-neutral-content my-20">
         <div className="glass p-10 rounded-2xl">
-          <div className="flex items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center">
             <div className="flex flex-col items-center space-y-5">
               <img
                 className="h-32 rounded-full border-green-500 border-4"

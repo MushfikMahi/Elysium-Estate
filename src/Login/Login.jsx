@@ -41,7 +41,9 @@ const Login = () => {
           </Helmet>
           <div className="space-y-5 flex-col">
             <div className="text-center">
-              <h1 className="text-5xl font-bold text-white">Login now!</h1>
+              <h1 className="text-5xl font-bold text-white mt-20">
+                Login now!
+              </h1>
             </div>
             <div className="w-full rounded-2xl p-5 max-w-md shadow-2xl glass">
               <form onSubmit={hadleLogin}>

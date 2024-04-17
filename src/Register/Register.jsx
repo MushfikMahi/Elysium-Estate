@@ -67,7 +67,7 @@ const Register = () => {
           </Helmet>
           <div className="hero-content flex-col">
             <div className="text-center">
-              <h1 className="text-5xl font-bold">Register now!</h1>
+              <h1 className="text-5xl font-bold mt-20">Register now!</h1>
             </div>
             <div className="w-full rounded-2xl p-5 max-w-md shadow-2xl glass">
               <form onSubmit={hadleRegister}>
