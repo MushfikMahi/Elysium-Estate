@@ -29,53 +29,9 @@ const Profile = () => {
               />
               <h3 className="text-3xl font-bold">Name : {user.displayName}</h3>
               <p className="text-xl">Email : {user.email}</p>
-            </div>
-            <div>
-              <div>
-                <Helmet>
-                  <title>Elysium - Profile</title>
-                </Helmet>
-                <div className="hero-content flex-col">
-                  <div className="text-center">
-                    <h1 className="text-5xl font-bold text-white">
-                      Update Now!
-                    </h1>
-                  </div>
-                  <div className="w-full rounded-2xl p-5 max-w-md shadow-2xl">
-                    <form onSubmit={handelProfileUpdate}>
-                      <div className="form-control">
-                        <label className="label">
-                          <span className="label-text text-white">Name</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="name"
-                          placeholder="name"
-                          className="input input-bordered bg-transparent"
-                        />
-                      </div>
-                      <div className="form-control">
-                        <label className="label">
-                          <span className="label-text text-white">
-                            Photo URL
-                          </span>
-                        </label>
-                        <input
-                          type="text"
-                          name="photo"
-                          placeholder="PhotoURL"
-                          className="input input-bordered bg-transparent"
-                        />
-                      </div>
-                      <div className="form-control mt-6">
-                        <button className="btn  bg-transparent w-full border-green-500 hover:border-transparent text-white hover:bg-green-400">
-                          Update
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+              <Helmet>
+                <title>Elysium - Profile</title>
+              </Helmet>
             </div>
           </div>
         </div>

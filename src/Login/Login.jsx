@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -7,13 +7,16 @@ import { ToastContainer, toast } from "react-toastify";
 const Login = () => {
   const { emailPassLogIn, googleCreateUser, gitHubCreateUser } =
     useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const hadleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
     emailPassLogIn(email, password)
-      .then(() =>
+      .then(
+        () => navigate(location?.state ? location.state : "/"),
         toast("You have sucessfully loged in", {
           className: "mt-20",
         })
@@ -22,12 +25,16 @@ const Login = () => {
   };
   const handelGoogleSignIn = () => {
     googleCreateUser()
-      .then((res) => console.log(res))
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((error) => console.log(error));
   };
   const handleGitHubSignIn = () => {
     gitHubCreateUser()
-      .then((res) => console.log(res))
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((error) => console.log(error));
   };
   return (

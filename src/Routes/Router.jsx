@@ -8,6 +8,8 @@ import PrivateDetail from "../PrivateRoute/PrivateDetail";
 import Profile from "../PrivateRoute/Profile";
 import About from "../About/About";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import UpdateProfile from "../PrivateRoute/UpdateProfile";
+import Testimony from "../PrivateRoute/Testimony";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,23 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/updateprofile",
+        element: (
+          <PrivateDetail>
+            <UpdateProfile></UpdateProfile>
+          </PrivateDetail>
+        ),
+      },
+      {
+        path: "/testimony",
+        loader: () => fetch("/testimonials.json"),
+        element: (
+          <PrivateDetail>
+            <Testimony></Testimony>
+          </PrivateDetail>
+        ),
       },
     ],
   },

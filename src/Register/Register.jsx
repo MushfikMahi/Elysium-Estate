@@ -1,18 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { FaGithub, FaGoogle } from "react-icons/fa6";
 const Register = () => {
-  const {
-    emailPassCreateUser,
-    googleCreateUser,
-    gitHubCreateUser,
-    updateUser,
-  } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { emailPassCreateUser, updateUser } = useContext(AuthContext);
   const hadleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -25,9 +21,10 @@ const Register = () => {
         if (/.*[a-z].*/.test(password)) {
           emailPassCreateUser(email, password)
             .then(() => {
-              toast("You have sucessfully Registered", {
-                className: "pt-20",
-              });
+              navigate(location?.state ? location.state : "/"),
+                toast("You have sucessfully Registered", {
+                  className: "pt-20",
+                });
               updateUser(name, photo);
               console.log(name, photo);
             })
@@ -40,30 +37,17 @@ const Register = () => {
           toast.error("your password must have to contain 1 lowercase", {
             className: "mt-20",
           });
-          console.log("your password must have to contain 1 lowercase");
         }
       } else {
         toast.error("Your password must contain 1 uppercase letter", {
           className: "mt-20",
         });
-        console.log("Your password must contain 1 uppercase letter");
       }
     } else {
       toast.error("Your password mush contain at least 6 carecters", {
         className: "mt-20",
       });
-      console.log("Your password mush contain at least 6 carecters");
     }
-  };
-  const handelGoogleSignIn = () => {
-    googleCreateUser()
-      .then((res) => console.log(res))
-      .catch((error) => console.log(error));
-  };
-  const handelGitHubSignIn = () => {
-    gitHubCreateUser()
-      .then((res) => console.log(res))
-      .catch((error) => console.log(error));
   };
   const [showPass, setShowPass] = useState(false);
   return (
