@@ -25,10 +25,10 @@ const Navbar = () => {
             <NavLink to={"/profile"}>Profile</NavLink>
           </li>
           <li>
-            <NavLink to={"/testimony"}>Testimony</NavLink>
+            <NavLink to={"/updateprofile"}>Update Profile</NavLink>
           </li>
           <li>
-            <NavLink to={"/updateprofile"}>Update Profile</NavLink>
+            <NavLink to={"/testimony"}>Testimony</NavLink>
           </li>
         </>
       )}
@@ -83,7 +83,9 @@ const Navbar = () => {
               Log Out
             </button>{" "}
             <div className="w-10 rounded-full">
-              <img title={user.displayName} alt="user" src={user.photoURL} />
+              <Link to={"/profile"}>
+                <img title={user.displayName} alt="user" src={user.photoURL} />
+              </Link>
             </div>
           </div>
         ) : (

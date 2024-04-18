@@ -3,12 +3,6 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 const Profile = () => {
   const { user, updateUser } = useContext(AuthContext);
-  const handelProfileUpdate = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const photo = e.target.photo.value;
-    updateUser(name, photo);
-  };
   return (
     <div
       className="hero min-h-screen"

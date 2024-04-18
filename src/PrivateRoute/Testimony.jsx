@@ -27,7 +27,7 @@ const Testimony = () => {
         >
           {AllData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="p-20 rounded-3xl border mx-20 shadow-2xl">
+              <div className="md:p-20 p-5 space-y-2 rounded-3xl border md:mx-20 mx-10 shadow-2xl">
                 <h3 className="text-3xl font-bold">{data.name}</h3>
                 <h5 className="font-bold">{data.location}</h5>
                 <p>{data.testimonial}</p>
