@@ -4,6 +4,14 @@ Welcome to Elysium Estate, where luxury and tranquility converge. Discover exqui
 
 🔗 Live Weblink : [Elysium Estate](https://optimal-creature.surge.sh/)
 
+**The 3 implemented packages from the list:**
+
+- AOS Package
+- React-leaflet
+- Swiper slider
+
+## 5 Bullet points of my website.
+
 - **Explore curated luxury properties:** Discover meticulously selected residences designed for unparalleled comfort and sophistication.
 - **Tailored experiences:** Experience personalized service and guidance from our dedicated team of professionals.
 - **Unparalleled comfort:** Enjoy the epitome of modern elegance in every residence, ensuring a refined living experience.
