@@ -38,7 +38,7 @@ const EstateDetails = () => {
           <p>{description}</p>
           <hr />
           <div className="">
-            <p className="flex items-center gap-2 py-1 px-5 w-2/5">
+            <p className="flex items-center gap-2 py-1 px-5">
               {" "}
               <span className="text-green-500">
                 <IoIosAlert />

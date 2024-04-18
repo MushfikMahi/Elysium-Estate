@@ -28,7 +28,7 @@ const Register = () => {
               toast("You have sucessfully Registered", {
                 className: "pt-20",
               });
-              updateUser("name", "https://ibb.co/S6MHWFc");
+              updateUser(name, photo);
               console.log(name, photo);
             })
             .catch((error) =>

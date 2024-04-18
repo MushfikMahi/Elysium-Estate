@@ -23,7 +23,7 @@ const Profile = () => {
           <div className="flex flex-col md:flex-row items-center justify-center">
             <div className="flex flex-col items-center space-y-5">
               <img
-                className="h-32 rounded-full border-green-500 border-4"
+                className="h-32 w-32 rounded-full border-green-500 border-4"
                 src={user.photoURL}
                 alt=""
               />
@@ -57,7 +57,7 @@ const Profile = () => {
                       <div className="form-control">
                         <label className="label">
                           <span className="label-text text-white">
-                            Password
+                            Photo URL
                           </span>
                         </label>
                         <input
