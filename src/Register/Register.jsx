@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 const Register = () => {
   const {
@@ -24,20 +25,33 @@ const Register = () => {
         if (/.*[a-z].*/.test(password)) {
           emailPassCreateUser(email, password)
             .then(() => {
+              toast("You have sucessfully Registered", {
+                className: "pt-20",
+              });
               updateUser("name", "https://ibb.co/S6MHWFc");
               console.log(name, photo);
             })
-            .catch((error) => toast.error(error.message));
+            .catch((error) =>
+              toast.error(error.message, {
+                className: "mt-20",
+              })
+            );
         } else {
-          toast("your password must have to contain 1 lowercase");
+          toast.error("your password must have to contain 1 lowercase", {
+            className: "mt-20",
+          });
           console.log("your password must have to contain 1 lowercase");
         }
       } else {
-        toast("Your password must contain 1 uppercase letter");
+        toast.error("Your password must contain 1 uppercase letter", {
+          className: "mt-20",
+        });
         console.log("Your password must contain 1 uppercase letter");
       }
     } else {
-      toast("Your password mush contain at least 6 carecters");
+      toast.error("Your password mush contain at least 6 carecters", {
+        className: "mt-20",
+      });
       console.log("Your password mush contain at least 6 carecters");
     }
   };
@@ -51,6 +65,7 @@ const Register = () => {
       .then((res) => console.log(res))
       .catch((error) => console.log(error));
   };
+  const [showPass, setShowPass] = useState(false);
   return (
     <div
       className="hero min-h-screen"
@@ -60,6 +75,9 @@ const Register = () => {
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
+      <div className="mt-20">
+        <ToastContainer />
+      </div>
       <div className="hero-content text-center text-neutral-content">
         <div className="hero">
           <Helmet>
@@ -107,17 +125,23 @@ const Register = () => {
                     required
                   />
                 </div>
-                <div className="form-control">
+                <div className="form-control relative">
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="password"
+                    type={showPass ? "text" : "password"}
                     name="password"
                     placeholder="password"
                     className="input input-bordered bg-transparent"
                     required
                   />
+                  <span
+                    className="absolute right-3 bottom-4 text-black "
+                    onClick={() => setShowPass(!showPass)}
+                  >
+                    {showPass ? <FaRegEyeSlash /> : <FaRegEye />}
+                  </span>
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn bg-transparent border-green-500 hover:border-transparent text-white hover:bg-green-400">
@@ -131,7 +155,7 @@ const Register = () => {
                   Login
                 </Link>
               </p>
-              <div className="mt-5">
+              {/* <div className="mt-5">
                 <button
                   className="btn bg-transparent w-full border-green-500 hover:border-transparent text-white hover:bg-green-400"
                   onClick={handelGoogleSignIn}
@@ -148,10 +172,9 @@ const Register = () => {
                   <FaGithub />
                   Sign in with GitHUb
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
-          <ToastContainer />
         </div>
       </div>
     </div>

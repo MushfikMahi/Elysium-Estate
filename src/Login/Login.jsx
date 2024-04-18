@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
+import { ToastContainer, toast } from "react-toastify";
 const Login = () => {
   const { emailPassLogIn, googleCreateUser, gitHubCreateUser } =
     useContext(AuthContext);
@@ -12,8 +13,12 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
     emailPassLogIn(email, password)
-      .then()
-      .catch((error) => console.log(error));
+      .then(() =>
+        toast("You have sucessfully loged in", {
+          className: "mt-20",
+        })
+      )
+      .catch((error) => toast.error(error.message));
   };
   const handelGoogleSignIn = () => {
     googleCreateUser()
@@ -70,14 +75,14 @@ const Login = () => {
                     className="input input-bordered text-white bg-transparent"
                     required
                   />
-                  <label className="label">
+                  {/* <label className="label">
                     <a
                       href="#"
                       className="label-text-alt text-white link link-hover"
                     >
                       Forgot password?
                     </a>
-                  </label>
+                  </label> */}
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn bg-transparent border-green-500 hover:border-transparent text-white hover:bg-green-400">
@@ -112,6 +117,7 @@ const Login = () => {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );

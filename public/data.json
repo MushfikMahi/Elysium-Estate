@@ -14,7 +14,8 @@
       "Private Terrace",
       "Gourmet Kitchen",
       "Infinity Pool"
-    ]
+    ],
+    "position": [51.5074, -0.1278]
   },
   {
     "image_url": "https://img.freepik.com/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302626.jpg?w=996",
@@ -31,7 +32,8 @@
       "Spa and Wellness Center",
       "Outdoor Dining Pavilion",
       "Tennis Court"
-    ]
+    ],
+    "position": [12.1165, -68.9304]
   },
   {
     "image_url": "https://img.freepik.com/premium-photo/private-island-landscaping-paradise-designed-nature-perfected_1003615-9767.jpg?w=996",
@@ -43,7 +45,8 @@
     "status": "sale",
     "area": "10 acres",
     "location": "Private Island, South Pacific",
-    "facilities": ["Luxury Villa", "Helipad", "Yacht Dock", "Infinity Pool"]
+    "facilities": ["Luxury Villa", "Helipad", "Yacht Dock", "Infinity Pool"],
+    "position": [-17.5667, -149.6]
   },
   {
     "image_url": "https://img.freepik.com/free-psd/sea-viewluxury-modern-beach-house-generative-ai_587448-1839.jpg?w=996",
@@ -60,7 +63,8 @@
       "Home Theater",
       "Wine Cellar",
       "Tropical Gardens"
-    ]
+    ],
+    "position": [41.9028, 12.4964]
   },
   {
     "image_url": "https://img.freepik.com/free-photo/beautiful-luxury-outdoor-swimming-pool-hotel-resort_74190-7433.jpg?w=996",
@@ -77,7 +81,8 @@
       "Spa and Wellness Center",
       "Fine Dining Restaurants",
       "Infinity Pools"
-    ]
+    ],
+    "position": [3.2028, 73.2207]
   },
   {
     "image_url": "https://img.freepik.com/free-photo/outdoor-patio_1203-3548.jpg?w=996",
@@ -94,6 +99,7 @@
       "Home Theater",
       "Gourmet Kitchen",
       "Tennis Court"
-    ]
+    ],
+    "position": [34.0522, -118.2437]
   }
 ]

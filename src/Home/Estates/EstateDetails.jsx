@@ -1,8 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoIosAlert } from "react-icons/io";
 import { FaRegMap, FaDollarSign } from "react-icons/fa6";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import { Marker, Popup } from "leaflet";
+import { MapContainer } from "react-leaflet/MapContainer";
+import { TileLayer } from "react-leaflet/TileLayer";
+import { useMap } from "react-leaflet/hooks";
+import "leaflet/dist/leaflet.css";
+// import "react-leaflet/dist/react-leaflet.css";
+import { Marker, Popup } from "react-leaflet";
 const EstateDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
@@ -17,14 +21,12 @@ const EstateDetails = () => {
     area,
     location,
     facilities,
+    position,
   } = estate;
-  {
-    facilities.map((fac) => console.log(fac));
-  }
-  const position = [51.505, 10.09];
+
   return (
-    <div>
-      <div className="container mx-auto mb-20 flex flex-col md:flex-row pt-16 gap-5 min-h-screen items-center">
+    <div className="container mx-auto">
+      <div className="mb-20 flex flex-col md:flex-row pt-16 gap-5 items-center">
         <div className="flex-1">
           <img src={image_url} className="w-full rounded-2xl" alt="" />
         </div>
@@ -71,19 +73,23 @@ const EstateDetails = () => {
           </div>
         </div>
       </div>
-      {/* <div className="h-80">
-        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <h3 className="text-center font-bold text-3xl my-10">Poperty Location</h3>
+      <div className="h-[500px]">
+        <MapContainer
+          className="h-[400px] w-full"
+          center={position}
+          zoom={13}
+          scrollWheelZoom={false}
+        >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+            <Popup>{location}</Popup>
           </Marker>
         </MapContainer>
-      </div> */}
+      </div>
     </div>
   );
 };
