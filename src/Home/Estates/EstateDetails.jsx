@@ -25,7 +25,7 @@ const EstateDetails = () => {
   } = estate;
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pt-20">
       <div className="mb-20 flex flex-col md:flex-row pt-16 gap-5 items-center">
         <div className="flex-1">
           <img src={image_url} className="w-full rounded-2xl" alt="" />
@@ -73,7 +73,9 @@ const EstateDetails = () => {
           </div>
         </div>
       </div>
-      <h3 className="text-center font-bold text-3xl my-10">Poperty Location</h3>
+      <h3 className="text-center font-bold text-3xl my-10">
+        Property Location
+      </h3>
       <div className="h-[500px]">
         <MapContainer
           className="h-[400px] w-full"

@@ -15,10 +15,10 @@ const Navbar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      {/* <li>
+      <li>
         <NavLink to={"/about"}>About</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to={"/login"}>Login</NavLink>
       </li>
       <li>
@@ -62,7 +62,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Elysium Estate</a>
+        <Link to={"/"} className="btn btn-ghost text-xl">
+          Elysium Estate
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
